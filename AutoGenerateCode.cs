@@ -21,6 +21,7 @@ namespace UnityGameFramework.Editor
     {
         private static string tablePath = "\\GameMain\\DataTables\\";
         private static string codePath = "\\GameMain\\Scripts\\DataTable\\";
+        private static string codeSpace = "StarForce";
         [MenuItem("Game Framework/AutoGenerateCode", false, 100)]
         private static void HandleAllDataTables()
         {
@@ -89,7 +90,7 @@ namespace UnityGameFramework.Editor
             sw = t.CreateText();
 
             WriteHeader(sw);
-            WriteNameSpcace(sw, "StarForce");
+            WriteNameSpcace(sw, codeSpace);
             sw.WriteLine("{");
             sw.WriteLine(string.Format("public class {0} : IDataRow", textOfTableName));
             sw.WriteLine("{");
